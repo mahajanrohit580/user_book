@@ -1,0 +1,26 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+      <!-- <p >{{ userdata$ | aysnc }}</p> -->
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <h3>User Create</h3>
+      </div>
+  
+      <!-- Login Form -->
+      <form  [formGroup]='userreg' (ngSubmit)="reguser()">
+        <input type="email" id="login" class="fadeIn second" name="login" placeholder="Email" formControlName="email"><br>
+        <span class="error" *ngIf="email!.invalid && email!.touched">*Required</span>
+        <br>
+        <input type="password" id="password" class="fadeIn third" name="login" placeholder="Password" formControlName="password">
+        <br>
+        <span class="error" *ngIf="password!.invalid && password!.touched">*Required</span>
+        <br>
+        <div class="alert alert-info" role="alert" *ngIf="successstatus">
+        {{ mgsstatus }}
+        </div>
+        <input type="submit" class="fadeIn fourth" value="Login">
+     </form>
+  
+    </div>
+  </div>

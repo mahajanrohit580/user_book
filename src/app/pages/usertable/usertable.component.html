@@ -1,0 +1,33 @@
+<h3>User List Details</h3> 
+Back To :<a routerLink="/">Login</a><br>
+
+<button type="button" class="btn btn-danger" (click)="logout()">Log Out</button>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">FirstName</th>
+    <th scope="col">lastName</th>
+    <th scope="col">Email</th>
+    <th scope="col">Avatar</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let userdata of userlistdetalis  "> 
+    <td>{{ userdata.id }}</td>
+    <td>{{ userdata.first_name }}</td>
+    <td>{{ userdata.last_name }}</td>
+    <td>{{ userdata.email }}</td>
+    <td><img [src]=" userdata.avatar" class="mr-2" style="width: 20px">
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
